@@ -6,7 +6,8 @@ const petitionSchema = new mongoose.Schema({
   creator: String,
   content: String,
   image: String,
-  user: { type: Schema.Types.ObjectId, ref: "User" }
+  user: { type: Schema.Types.ObjectId, ref: "User" },
+  votes: [String]
 });
 
 const Petitions = mongoose.model("Petition", petitionSchema);

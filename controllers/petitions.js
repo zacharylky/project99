@@ -43,4 +43,18 @@ router.put("/:id", (req, res) => {
   );
 });
 
+router.put("/vote/:id", (req, res) => {
+  console.log(req.body);
+  Petitions.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    { vote: req.body.vote },
+    (err, updatedPetition) => {
+      res.json(updatedPetition);
+      //   console.log(updatedPetition);
+      // res.redirect(303, '/profile');
+    }
+  );
+});
+
 module.exports = router;

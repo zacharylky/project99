@@ -9,7 +9,60 @@ class Showpetition extends React.Component {
     };
   }
 
+  upVote = () => {
+    console.log("working");
+    // this.state.petition.votes.slice();
+    let currentVote = [];
+    if (this.state.petition.votes) {
+      currentVote = [...this.state.petition.votes];
+    }
+    currentVote.push(this.state.petition.user._id);
+    console.log(currentVote);
+    let item = this.state.petition;
+    item.votes = currentVote;
+    fetch("petitions/vote/" + this.state.petition._id, {
+      body: JSON.stringify(item),
+      method: "PUT",
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json"
+      }
+    })
+      .then(petition => {
+        console.log(petition);
+        return petition.json();
+      })
+      .catch(error => console.log(error));
+  };
+
+  getVotes() {
+    if (this.state.petition.votes) {
+      return this.state.petition.votes.length;
+    } else {
+      return 0;
+    }
+  }
+
+  canVote() {
+    console.log(this.state.petition.user._id);
+    console.log(this.state.petition.votes);
+    if (this.state.petition.votes) {
+      if (
+        this.state.petition.votes.indexOf(this.state.petition.user._id) !== -1
+      ) {
+        console.log("do not display");
+        return false;
+      } else {
+        return true;
+      }
+    }
+    return true;
+  }
+
   render() {
+    let votes = this.getVotes();
+    let canVote = this.canVote();
+
     // console.log('testing for index', this.state.index);
     console.log("petition", this.state.petition);
     return (
@@ -30,6 +83,8 @@ class Showpetition extends React.Component {
                 ? this.state.petition.user.username
                 : "No Owner"}
             </p>
+            <div>{votes ? votes : 0}</div>
+            {canVote ? <button onClick={this.upVote}>Upvote</button> : ""}
             <Link className="back-button btn btn-primary" to="/petitions">
               Back
             </Link>
