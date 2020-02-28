@@ -110,7 +110,7 @@ class Profile extends React.Component {
                         <p>{petition.author}</p>
                         <Link
                           to={{
-                            pathname: "/toeditpetition",
+                            pathname: "/toeditpetitions",
                             state: {
                               petition: petition
                             }
