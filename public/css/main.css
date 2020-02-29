@@ -124,7 +124,7 @@ body,
 
 .jumbo3 {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(/img/books.jpg);
+    url(/public/css/img/petitions.jpg);
   background-size: cover;
   background-position: 10% 30%;
   height: 100%;
@@ -182,7 +182,7 @@ body,
 
 .jumbo5 {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(/img/books.jpg);
+    url(/public/css/img/petitions.jpg);
   background-size: cover;
   background-position: 10% 30%;
   height: 100%;
@@ -201,7 +201,7 @@ body,
 
 .jumbo6 {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(/img/books.jpg);
+    url(/public/css/img/petitions.jpg);
   background-size: cover;
   background-position: 10% 30%;
   height: 100%;
@@ -219,7 +219,7 @@ body,
 
 .jumbo7 {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(/img/books.jpg);
+    url(/public/css/img/petitions.jpg);
   background-size: cover;
   background-position: 10% 30%;
   padding-top: 5%;

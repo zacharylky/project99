@@ -83,7 +83,7 @@ class Showpetition extends React.Component {
                 ? this.state.petition.user.username
                 : "No Owner"}
             </p>
-            <div>{votes ? votes : 0}</div>
+            <div>Upvotes: {votes ? votes : 0}</div>
             {canVote ? <button onClick={this.upVote}>Upvote</button> : ""}
             <Link className="back-button btn btn-primary" to="/petitions">
               Back

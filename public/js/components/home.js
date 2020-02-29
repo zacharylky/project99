@@ -6,15 +6,14 @@ class Home extends React.Component {
         <div className="jumbo1">
           <div className="container">
             <h1 className="display-4 jumbo1words">
-              Priceless education,
+              Find support
               <br />
-              Expensive textbooks
+              For what you love
             </h1>
             <div class="container">
               <p className="words">
-                Education is priceless but textbooks are expensive, so why not
-                share / trade / swap your old textbooks with someone who needs
-                it!
+                When you have 99 problems, tell us about it and find support for
+                your cause
               </p>
               <Link to="/signup">
                 <button class="btn btn-primary">Sign Up</button>
